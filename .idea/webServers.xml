@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f05105c2-24b3-4892-905f-ac185503acdc" name="mastera-goroda" url="http://ikarus2.beget.ru">
+        <fileTransfer host="ikarus2.beget.ru" port="21" rootFolder="/mastera-goroda.ru/public_html" password="dfe3dfeddfdedfe7df93df9fdfdddfee" username="serj0011">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

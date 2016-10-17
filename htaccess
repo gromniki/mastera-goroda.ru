@@ -1,0 +1,44 @@
+################ Cotonti Handy URLs for Apache #######################
+
+# Below are the rules to be included in your main .htaccess file or httpd.conf
+
+# Rewrite engine options
+Options -Indexes
+RewriteEngine On
+
+# Server-relative path to Cotonti. Replace it with your path if you run Cotonti
+# in a subfolder
+RewriteBase "/"
+
+# Language selector
+RewriteRule ^(en|ru|de|nl)/(.*) $2?l=$1 [QSA,NC,NE]
+
+# Sitemap shortcut
+RewriteRule ^sitemap\.xml$ index.php?r=sitemap [L]
+
+# Admin area and message are special scripts
+RewriteRule ^admin/([a-z0-9]+) admin.php?m=$1 [QSA,NC,NE,L]
+RewriteRule ^(admin|login|message)(/|\?|$) $1.php [QSA,NC,NE,L]
+
+# users
+RewriteRule ^customers/?$ index.php?e=users&group=customer [QSA,NC,NE,L]
+RewriteRule ^masters/?$ index.php?e=users&group=master [QSA,NC,NE,L]
+RewriteRule ^customers/([a-z0-9]+)/?$ index.php?e=users&group=customer&cat=$1 [QSA,NC,NE,L]
+RewriteRule ^masters/([a-z0-9]+)/?$ index.php?e=users&group=master&cat=$1 [QSA,NC,NE,L]
+
+# forums
+RewriteRule ^forums/([a-zA-Z0-9_./%-]+)/topic([0-9]+)/page([0-9]+)?$ index.php?e=forums&m=posts&q=$2&d=$3 [QSA,NC,NE,L]
+RewriteRule ^forums/([a-zA-Z0-9_./%-]+)/topic([0-9]+)?$ index.php?e=forums&m=posts&q=$2 [QSA,NC,NE,L]
+RewriteRule ^forums/([a-zA-Z0-9_./%-]+)/post([0-9]+)?$ index.php?e=forums&m=posts&id=$2 [QSA,NC,NE,L]
+RewriteRule ^forums/([a-zA-Z0-9_./%-]+)/([a-zA-Z0-9_%-]+)/page([0-9]+)?$ index.php?e=forums&m=topics&s=$2&d=$3 [QSA,NC,NE,L]
+RewriteRule ^forums/([a-zA-Z0-9_./%-]+)/([a-zA-Z0-9_%-]+)/?$ index.php?e=forums&m=topics&s=$2 [QSA,NC,NE,L]
+RewriteRule ^forums/([a-zA-Z0-9_%-]+)/?$ index.php?e=forums&c=$1 [QSA,NC,NE,L]
+RewriteRule ^forums/?$ index.php?e=forums [QSA,NC,NE,L]
+
+# System category has priority over /system folder
+RewriteRule ^system/?$  index.php?rwr=system [QSA,NC,NE,L]
+
+# All the rest goes through standard rewrite gateway
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?]+) index.php?rwr=$1 [QSA,NC,NE,L]

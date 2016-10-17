@@ -1,0 +1,125 @@
+/* @base-color: rgb(64, 137, 198); - старый цвет */
+/* @warning-color: spin(@base-color, @distance*2); */
+/* Цвета сообщений */
+.bt {
+  padding: 25px;
+  border: 1px solid #f4842a;
+  color: #362203;
+  background-color: #f5b043;
+}
+.bt p {
+  padding: 5px;
+}
+.gr-btn {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
+  text-transform: none;
+  transition-duration: 0.2s;
+}
+.gr-btn a {
+  color: #fff;
+  font-family: inherit;
+}
+.btn {
+  margin: 20px 5px 5px 0;
+  padding: 7px 20px;
+  border: 0;
+  box-shadow: 0 3px 0 #2b74b0;
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  background-color: #4089C6;
+}
+.btn:hover {
+  color: #fff;
+  cursor: pointer;
+  background: #2b74b0;
+  box-shadow: 0 3px 0 #4089C6;
+}
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: #eee;
+}
+/* Вывод сообщений */
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.alert-danger,
+.alert-error {
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+.info-block {
+  padding: 25px;
+  border: 1px solid #ebba01;
+  color: #3a2e00;
+  background-color: #fed53b;
+  box-shadow: 0 5px 10px -2px #cccccc;
+}
+.info-block p {
+  padding: 5px;
+}
+/* Панель управления страницами */
+.gr-block {
+  margin: 0 25px 25px 0;
+  padding: 30px;
+  border-left: 5px solid #ccc;
+  box-shadow: 0 5px 10px 0 #ddd;
+  background: #fff;
+}
+.gr-block .gr-headpanel {
+  border-bottom: 1px solid #ccc;
+  font-size: 1.1em;
+}
+.gr-block .gr-subnav {
+  padding: 0;
+  list-style: none;
+}
+/* Таблицы */
+table.table-subnav {
+  margin-top: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+table.table-subnav th {
+  padding: 0 0 20px;
+  font: normal 22px "Roboto Condensed", Helvetica, Arial, sans-serif;
+}
+table.table-subnav td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+table.table-subnav td:hover {
+  background: #f7f7f7;
+}
+/* button {
+	margin: 20px 5px 5px 0;
+	padding: 10px 20px;
+	border: 0;
+	box-shadow: 0 3px 0 #2b74b0;
+	font-size: inherit;
+	font-family: inherit;
+	color: #fff;
+	background-color: #4089C6;
+}
+button:hover {
+	color: #fff;
+	cursor: pointer;
+	background: #2b74b0;
+	box-shadow: 0 3px 0 #4089C6;
+} */
